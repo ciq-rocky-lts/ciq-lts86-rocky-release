@@ -17,7 +17,7 @@
 %define distro_code  Green Obsidian
 %define major   8
 %define minor   6
-%define rocky_rel 8
+%define rocky_rel 9
 %define upstream_rel %{major}.%{minor}
 %define rpm_license  BSD-3-Clause
 
@@ -28,6 +28,9 @@
 %ifarch ppc64le
 %define tuned_profile :server
 %endif
+
+%define cloudcontentdir  /public/files
+%define product          /lts-%{upstream_rel}
 
 # Avoids a weird anaconda problem
 %global __requires_exclude_from %{_libexecdir}
@@ -249,6 +252,8 @@ echo "vault/rocky" > %{buildroot}%{_sysconfdir}/dnf/vars/contentdir
 echo "%{upstream_rel}" > %{buildroot}%{_sysconfdir}/dnf/vars/releasever
 echo "pub/sig" > %{buildroot}%{_sysconfdir}/dnf/vars/sigcontentdir
 echo "%{major}-stream" > %{buildroot}%{_sysconfdir}/dnf/vars/stream
+echo "%{cloudcontentdir}" > %{buildroot}%{_sysconfdir}/dnf/vars/cloudcontentdir
+echo "%{product}" > %{buildroot}%{_sysconfdir}/dnf/vars/product.cloud
 
 # Copy out GPG keys
 install -d -m 0755 %{buildroot}%{_sysconfdir}/pki/rpm-gpg
@@ -307,11 +312,38 @@ install -p -m 0644 %{SOURCE1400} %{buildroot}%{_sysconfdir}/yum.repos.d/
 %config(noreplace) %{_sysconfdir}/dnf/vars/releasever
 %config(noreplace) %{_sysconfdir}/dnf/vars/sigcontentdir
 %config(noreplace) %{_sysconfdir}/dnf/vars/stream
+%config(noreplace) %{_sysconfdir}/dnf/vars/cloudcontentdir
+%config(noreplace) %{_sysconfdir}/dnf/vars/product.cloud
 
 %files -n rocky-gpg-keys
 %{_sysconfdir}/pki/rpm-gpg/
 
+# Other distros may have their own specific cloud mirrors, which will
+# get symlinked into place in this same way, and should take
+# precedence over the base cloud repos from this package set.  If
+# there exists a file or non-dangling symlink, this package won't
+# supersede it.
+%posttrans -n ciq-rocky86-cloud-repos%{?rltype}
+# only run on install, not upgrade
+if [ "$1" = "1" ]; then
+    if [ ! -f %{_sysconfdir}/dnf/vars/product ]; then
+        ln -fs %{_sysconfdir}/dnf/vars/product.cloud %{_sysconfdir}/dnf/vars/product
+    fi
+fi
+
+%preun -n ciq-rocky86-cloud-repos%{?rltype}
+# only run on uninstall, not upgrade
+if [ "$1" = "0" ]; then
+    target=$(readlink %{_sysconfdir}/dnf/vars/product)
+    if [ "$target" = "%{_sysconfdir}/dnf/vars/product.cloud" ]; then
+        rm -f %{_sysconfdir}/dnf/vars/product
+    fi
+fi
+
 %changelog
+* Wed Jun 25 2025 Trinity Quirk <tquirk@ciq.com> - 8.6-9
+- Add support for AWS cloud mirroring
+
 * Tue May 11 2025 Joseph Tate <jtate@ciq.com> - 8.6-8
 - Fix cloud-repos url paths
 
