@@ -9,7 +9,7 @@
 # baseurl line instead.
 
 [extras]
-name=Rocky Linux $releasever - Extras
+name=Rocky Linux 8.6 - Extras
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=extras-$releasever
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/extras/$basearch/os/
 gpgcheck=1

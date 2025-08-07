@@ -2,7 +2,7 @@
 #
 
 [devel]
-name=Rocky Linux $releasever - Devel WARNING! FOR BUILDROOT AND KOJI USE
+name=Rocky Linux 8.6 - Devel WARNING! FOR BUILDROOT AND KOJI USE
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=Devel-$releasever
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/Devel/$basearch/os/
 gpgcheck=1

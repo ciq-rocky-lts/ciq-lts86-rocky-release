@@ -9,7 +9,7 @@
 # baseurl line instead.
 
 [ha]
-name=Rocky Linux $releasever - HighAvailability
+name=Rocky Linux 8.6 - HighAvailability
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=HighAvailability-$releasever
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/HighAvailability/$basearch/os/
 gpgcheck=1

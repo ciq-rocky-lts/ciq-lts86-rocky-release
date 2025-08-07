@@ -9,7 +9,7 @@
 # baseurl line instead.
 
 [nfv]
-name=Rocky Linux $releasever - NFV
+name=Rocky Linux 8.6 - NFV
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=NFV-$releasever
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/nfv/$basearch/os/
 gpgcheck=1

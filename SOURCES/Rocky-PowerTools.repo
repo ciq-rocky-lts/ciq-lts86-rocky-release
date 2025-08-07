@@ -9,7 +9,7 @@
 # baseurl line instead.
 
 [powertools]
-name=Rocky Linux $releasever - PowerTools
+name=Rocky Linux 8.6 - PowerTools
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=PowerTools-$releasever
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/PowerTools/$basearch/os/
 gpgcheck=1

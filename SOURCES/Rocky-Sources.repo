@@ -1,7 +1,7 @@
 # Rocky-Sources.repo
 
 [baseos-source]
-name=Rocky Linux $releasever - BaseOS - Source
+name=Rocky Linux 8.6 - BaseOS - Source
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=source&repo=BaseOS-$releasever-source
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/BaseOS/source/tree/
 gpgcheck=1
@@ -9,7 +9,7 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [appstream-source]
-name=Rocky Linux $releasever - AppStream - Source
+name=Rocky Linux 8.6 - AppStream - Source
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=source&repo=AppStream-$releasever-source
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/AppStream/source/tree/
 gpgcheck=1
@@ -17,7 +17,7 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [extras-source]
-name=Rocky Linux $releasever - Extras - Source
+name=Rocky Linux 8.6 - Extras - Source
 ##mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=source&repo=extras-$releasever-source
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/extras/source/tree/
 gpgcheck=1
@@ -25,7 +25,7 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [plus-source]
-name=Rocky Linux $releasever - Plus - Source
+name=Rocky Linux 8.6 - Plus - Source
 ##mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=source&repo=plus-$releasever-source
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/plus/source/tree/
 gpgcheck=1
@@ -33,7 +33,7 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [ha-source]
-name=Rocky Linux $releasever - High Availability - Source
+name=Rocky Linux 8.6 - High Availability - Source
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=source&repo=HighAvailability-$releasever-source
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/HighAvailability/source/tree/
 gpgcheck=1
@@ -41,7 +41,7 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [powertools-source]
-name=Rocky Linux $releasever - PowerTools - Source
+name=Rocky Linux 8.6 - PowerTools - Source
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=source&repo=PowerTools-$releasever-source
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/PowerTools/source/tree/
 gpgcheck=1
@@ -49,7 +49,7 @@ enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [resilient-storage-source]
-name=Rocky Linux $releasever - Resilient Storage - Source
+name=Rocky Linux 8.6 - Resilient Storage - Source
 #mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=source&repo=ResilientStorage-$releasever-source
 baseurl=http://dl.rockylinux.org/vault/rocky/8.6/ResilientStorage/source/tree/
 gpgcheck=1

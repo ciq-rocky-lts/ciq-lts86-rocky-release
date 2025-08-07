@@ -1,6 +1,6 @@
 [lts]
-name=CIQ Rocky Linux $releasever LTS
-baseurl=$baseurl1$cloudcontentdir$product/rocky-lts-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-lts-$releasever.$basearch
+name=CIQ Rocky Linux 8.6 LTS
+baseurl=$baseurl1$cloudcontentdir$product/rocky-lts-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-lts-8.6.$basearch
 gpgcheck=1
 enabled=1
 countme=1
@@ -9,8 +9,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CIQ
 # Rocky-BaseOS.repo
 
 [baseos]
-name=Rocky Linux $releasever - BaseOS
-baseurl=$baseurl1$cloudcontentdir$product/rocky-baseos-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-baseos-$releasever.$basearch
+name=Rocky Linux 8.6 - BaseOS
+baseurl=$baseurl1$cloudcontentdir$product/rocky-baseos-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-baseos-8.6.$basearch
 gpgcheck=1
 enabled=1
 countme=1
@@ -19,8 +19,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-AppStream.repo
 
 [appstream]
-name=Rocky Linux $releasever - AppStream
-baseurl=$baseurl1$cloudcontentdir$product/rocky-appstream-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-appstream-$releasever.$basearch
+name=Rocky Linux 8.6 - AppStream
+baseurl=$baseurl1$cloudcontentdir$product/rocky-appstream-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-appstream-8.6.$basearch
 gpgcheck=1
 enabled=1
 countme=1
@@ -29,8 +29,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-PowerTools.repo
 
 [powertools]
-name=Rocky Linux $releasever - PowerTools
-baseurl=$baseurl1$cloudcontentdir$product/rocky-powertools-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-powertools-$releasever.$basearch
+name=Rocky Linux 8.6 - PowerTools
+baseurl=$baseurl1$cloudcontentdir$product/rocky-powertools-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-powertools-8.6.$basearch
 gpgcheck=1
 enabled=0
 countme=1
@@ -39,8 +39,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-Extras.repo
 
 [extras]
-name=Rocky Linux $releasever - Extras
-baseurl=$baseurl1$cloudcontentdir$product/rocky-extras-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-extras-$releasever.$basearch
+name=Rocky Linux 8.6 - Extras
+baseurl=$baseurl1$cloudcontentdir$product/rocky-extras-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-extras-8.6.$basearch
 gpgcheck=1
 enabled=1
 countme=1
@@ -49,8 +49,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-HighAvailability.repo
 
 [ha]
-name=Rocky Linux $releasever - HighAvailability
-baseurl=$baseurl1$cloudcontentdir$product/rocky-highavailability-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-highavailability-$releasever.$basearch
+name=Rocky Linux 8.6 - HighAvailability
+baseurl=$baseurl1$cloudcontentdir$product/rocky-highavailability-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-highavailability-8.6.$basearch
 gpgcheck=1
 enabled=0
 countme=1
@@ -59,8 +59,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-ResilientStorage.repo
 
 [resilient-storage]
-name=Rocky Linux $releasever - ResilientStorage
-baseurl=$baseurl1$cloudcontentdir$product/rocky-resilientstorage-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-resilientstorage-$releasever.$basearch
+name=Rocky Linux 8.6 - ResilientStorage
+baseurl=$baseurl1$cloudcontentdir$product/rocky-resilientstorage-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-resilientstorage-8.6.$basearch
 gpgcheck=1
 enabled=0
 countme=1
@@ -69,8 +69,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-RT.repo
 
 [rt]
-name=Rocky Linux $releasever - Realtime
-baseurl=$baseurl1$cloudcontentdir$product/rocky-rt-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-rt-$releasever.$basearch
+name=Rocky Linux 8.6 - Realtime
+baseurl=$baseurl1$cloudcontentdir$product/rocky-rt-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-rt-8.6.$basearch
 gpgcheck=1
 enabled=0
 countme=1
@@ -79,8 +79,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-NFV.repo
 
 [nfv]
-name=Rocky Linux $releasever - NFV
-baseurl=$baseurl1$cloudcontentdir$product/rocky-nfv-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-nfv-$releasever.$basearch
+name=Rocky Linux 8.6 - NFV
+baseurl=$baseurl1$cloudcontentdir$product/rocky-nfv-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-nfv-8.6.$basearch
 gpgcheck=1
 enabled=0
 countme=1
@@ -89,43 +89,43 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-Debuginfo.repo
 
 [lts-debuginfo]
-name=CIQ Rocky Linux $releasever LTS - Debuginfo
-baseurl=$baseurl1$cloudcontentdir$product/rocky-lts-$releasever.$basearch-debug,$baseurl2$cloudcontentdir$product/rocky-lts-$releasever.$basearch-debug
+name=CIQ Rocky Linux 8.6 LTS - Debuginfo
+baseurl=$baseurl1$cloudcontentdir$product/rocky-lts-8.6.$basearch-debug,$baseurl2$cloudcontentdir$product/rocky-lts-8.6.$basearch-debug
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CIQ
 
 [baseos-debuginfo]
-name=Rocky Linux $releasever - BaseOS - Debuginfo
-baseurl=$baseurl1$cloudcontentdir$product/rocky-baseos-debug-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-baseos-debug-$releasever.$basearch
+name=Rocky Linux 8.6 - BaseOS - Debuginfo
+baseurl=$baseurl1$cloudcontentdir$product/rocky-baseos-debug-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-baseos-debug-8.6.$basearch
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [appstream-debuginfo]
-name=Rocky Linux $releasever - AppStream - Debuginfo
-baseurl=$baseurl1$cloudcontentdir$product/rocky-appstream-debug-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-appstream-debug-$releasever.$basearch
+name=Rocky Linux 8.6 - AppStream - Debuginfo
+baseurl=$baseurl1$cloudcontentdir$product/rocky-appstream-debug-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-appstream-debug-8.6.$basearch
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [ha-debuginfo]
-name=Rocky Linux $releasever - High Availability - Debuginfo
-baseurl=$baseurl1$cloudcontentdir$product/rocky-highavailability-debug-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-highavailability-debug-$releasever.$basearch
+name=Rocky Linux 8.6 - High Availability - Debuginfo
+baseurl=$baseurl1$cloudcontentdir$product/rocky-highavailability-debug-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-highavailability-debug-8.6.$basearch
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [powertools-debuginfo]
-name=Rocky Linux $releasever - PowerTools - Debuginfo
-baseurl=$baseurl1$cloudcontentdir$product/rocky-powertools-debug-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-powertools-debug-$releasever.$basearch
+name=Rocky Linux 8.6 - PowerTools - Debuginfo
+baseurl=$baseurl1$cloudcontentdir$product/rocky-powertools-debug-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-powertools-debug-8.6.$basearch
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [resilient-storage-debuginfo]
-name=Rocky Linux $releasever - Resilient Storage - Debuginfo
-baseurl=$baseurl1$cloudcontentdir$product/rocky-resilientstorage-debug-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-resilientstorage-debug-$releasever.$basearch
+name=Rocky Linux 8.6 - Resilient Storage - Debuginfo
+baseurl=$baseurl1$cloudcontentdir$product/rocky-resilientstorage-debug-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-resilientstorage-debug-8.6.$basearch
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
@@ -133,57 +133,57 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-Sources.repo
 
 [lts-source]
-name=CIQ Rocky Linux $releasever LTS - Source
-baseurl=$baseurl1$cloudcontentdir$product/rocky-lts-$releasever.src,$baseurl2$cloudcontentdir$product/rocky-lts-$releasever.src
+name=CIQ Rocky Linux 8.6 LTS - Source
+baseurl=$baseurl1$cloudcontentdir$product/rocky-lts-8.6.src,$baseurl2$cloudcontentdir$product/rocky-lts-8.6.src
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CIQ
 
 [baseos-source]
-name=Rocky Linux $releasever - BaseOS - Source
-baseurl=$baseurl1$cloudcontentdir$product/rocky-baseos-$releasever.source,$baseurl2$cloudcontentdir$product/rocky-baseos-$releasever.source
+name=Rocky Linux 8.6 - BaseOS - Source
+baseurl=$baseurl1$cloudcontentdir$product/rocky-baseos-8.6.source,$baseurl2$cloudcontentdir$product/rocky-baseos-8.6.source
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [appstream-source]
-name=Rocky Linux $releasever - AppStream - Source
-baseurl=$baseurl1$cloudcontentdir$product/rocky-appstream-$releasever.source,$baseurl2$cloudcontentdir$product/rocky-appstream-$releasever.source
+name=Rocky Linux 8.6 - AppStream - Source
+baseurl=$baseurl1$cloudcontentdir$product/rocky-appstream-8.6.source,$baseurl2$cloudcontentdir$product/rocky-appstream-8.6.source
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 #[extras-source]
-#name=Rocky Linux $releasever - Extras - Source
-#baseurl=$baseurl1$cloudcontentdir$product/rocky-extras-$releasever.source,$baseurl2$cloudcontentdir$product/rocky-extras-$releasever.source
+#name=Rocky Linux 8.6 - Extras - Source
+#baseurl=$baseurl1$cloudcontentdir$product/rocky-extras-8.6.source,$baseurl2$cloudcontentdir$product/rocky-extras-8.6.source
 #gpgcheck=1
 #enabled=0
 #gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 #[plus-source]
-#name=Rocky Linux $releasever - Plus - Source
-#baseurl=$baseurl1$cloudcontentdir$product/rocky-plus-$releasever.source,$baseurl2$cloudcontentdir$product/rocky-plus-$releasever.source
+#name=Rocky Linux 8.6 - Plus - Source
+#baseurl=$baseurl1$cloudcontentdir$product/rocky-plus-8.6.source,$baseurl2$cloudcontentdir$product/rocky-plus-8.6.source
 #gpgcheck=1
 #enabled=0
 #gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [ha-source]
-name=Rocky Linux $releasever - High Availability - Source
-baseurl=$baseurl1$cloudcontentdir$product/rocky-highavailability-$releasever.source,$baseurl2$cloudcontentdir$product/rocky-highavailability-$releasever.source
+name=Rocky Linux 8.6 - High Availability - Source
+baseurl=$baseurl1$cloudcontentdir$product/rocky-highavailability-8.6.source,$baseurl2$cloudcontentdir$product/rocky-highavailability-8.6.source
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [powertools-source]
-name=Rocky Linux $releasever - PowerTools - Source
-baseurl=$baseurl1$cloudcontentdir$product/rocky-powertools-$releasever.source,$baseurl2$cloudcontentdir$product/rocky-powertools-$releasever.source
+name=Rocky Linux 8.6 - PowerTools - Source
+baseurl=$baseurl1$cloudcontentdir$product/rocky-powertools-8.6.source,$baseurl2$cloudcontentdir$product/rocky-powertools-8.6.source
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 
 [resilient-storage-source]
-name=Rocky Linux $releasever - Resilient Storage - Source
-baseurl=$baseurl1$cloudcontentdir$product/rocky-resilientstorage-$releasever.source,$baseurl2$cloudcontentdir$product/rocky-resilientstorage-$releasever.source
+name=Rocky Linux 8.6 - Resilient Storage - Source
+baseurl=$baseurl1$cloudcontentdir$product/rocky-resilientstorage-8.6.source,$baseurl2$cloudcontentdir$product/rocky-resilientstorage-8.6.source
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
@@ -191,8 +191,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-Devel.repo
 
 [devel]
-name=Rocky Linux $releasever - Devel WARNING! FOR BUILDROOT AND KOJI USE
-baseurl=$baseurl1$cloudcontentdir$product/rocky-devel-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-devel-$releasever.$basearch
+name=Rocky Linux 8.6 - Devel WARNING! FOR BUILDROOT AND KOJI USE
+baseurl=$baseurl1$cloudcontentdir$product/rocky-devel-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-devel-8.6.$basearch
 gpgcheck=1
 enabled=0
 countme=1
@@ -201,8 +201,8 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rockyofficial
 # Rocky-Plus.repo
 
 [plus]
-name=Rocky Linux $releasever - Plus
-baseurl=$baseurl1$cloudcontentdir$product/rocky-plus-$releasever.$basearch,$baseurl2$cloudcontentdir$product/rocky-plus-$releasever.$basearch
+name=Rocky Linux 8.6 - Plus
+baseurl=$baseurl1$cloudcontentdir$product/rocky-plus-8.6.$basearch,$baseurl2$cloudcontentdir$product/rocky-plus-8.6.$basearch
 gpgcheck=1
 enabled=0
 countme=1

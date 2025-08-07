@@ -17,7 +17,7 @@
 %define distro_code  Green Obsidian
 %define major   8
 %define minor   6
-%define rocky_rel 9
+%define rocky_rel 10
 %define upstream_rel %{major}.%{minor}
 %define rpm_license  BSD-3-Clause
 
@@ -60,11 +60,7 @@ Provides:       rocky-release-eula
 Provides:       redhat-release-eula
 Provides:       centos-release-eula
 
-
-
-# Stocky rocky-repos and ciq-rocky86-repos should be provided by the CIQ specific repos package
-Requires: ciq-rocky86-repos(%{major})
-Requires: rocky-repos(%{major})
+Requires:       rocky-gpg-keys
 
 # CIQ LTS 8.6 packages should obsolete and conflict with the canonical rocky-release package:
 Obsoletes: rocky-release
@@ -115,7 +111,6 @@ Summary:        %{distro_name} Package Repositories
 License:        %{rpm_license}
 Provides:       rocky-repos(%{major}) = %{upstream_rel}
 Requires:       system-release = %{upstream_rel}
-Requires:       rocky-gpg-keys
 Conflicts:      %{name} < 8.0
 
 
@@ -140,7 +135,6 @@ Summary:        Cloud package repositories for %{distro_name}
 License:        %{rpm_license}
 Provides:       rocky-repos(%{major}) = %{upstream_rel}
 Requires:       system-release = %{upstream_rel}
-Requires:       rocky-gpg-keys
 Requires:       python3-rlc-cloud-repos
 Conflicts:      %{name} < 8.0
 
@@ -249,7 +243,6 @@ install -m 0644 %{SOURCE302} %{buildroot}/%{_prefix}/lib/systemd/system-preset/
 # dnf stuff
 install -d -m 0755 %{buildroot}%{_sysconfdir}/dnf/vars
 echo "vault/rocky" > %{buildroot}%{_sysconfdir}/dnf/vars/contentdir
-echo "%{upstream_rel}" > %{buildroot}%{_sysconfdir}/dnf/vars/releasever
 echo "pub/sig" > %{buildroot}%{_sysconfdir}/dnf/vars/sigcontentdir
 echo "%{major}-stream" > %{buildroot}%{_sysconfdir}/dnf/vars/stream
 echo "%{cloudcontentdir}" > %{buildroot}%{_sysconfdir}/dnf/vars/cloudcontentdir
@@ -301,7 +294,6 @@ install -p -m 0644 %{SOURCE1400} %{buildroot}%{_sysconfdir}/yum.repos.d/
 %license LICENSE
 %config(noreplace) %{_sysconfdir}/yum.repos.d/Rocky-*.repo
 %config(noreplace) %{_sysconfdir}/dnf/vars/contentdir
-%config(noreplace) %{_sysconfdir}/dnf/vars/releasever
 %config(noreplace) %{_sysconfdir}/dnf/vars/sigcontentdir
 %config(noreplace) %{_sysconfdir}/dnf/vars/stream
 
@@ -309,7 +301,6 @@ install -p -m 0644 %{SOURCE1400} %{buildroot}%{_sysconfdir}/yum.repos.d/
 %license LICENSE
 %config(noreplace) %{_sysconfdir}/yum.repos.d/lts-cloud.repo
 %config(noreplace) %{_sysconfdir}/dnf/vars/contentdir
-%config(noreplace) %{_sysconfdir}/dnf/vars/releasever
 %config(noreplace) %{_sysconfdir}/dnf/vars/sigcontentdir
 %config(noreplace) %{_sysconfdir}/dnf/vars/stream
 %config(noreplace) %{_sysconfdir}/dnf/vars/cloudcontentdir
@@ -341,6 +332,11 @@ if [ "$1" = "0" ]; then
 fi
 
 %changelog
+* Tue Jul 22 2025 Trinity Quirk <tquirk@ciq.com> - 8.6-10
+- Drop LTS-specific releasever variable (LE-3609)
+- Move dependency on GPG keys subpackage to main package (LE-3610)
+- Drop dependency on -repos subpackages from main package (LE-3610)
+
 * Wed Jun 25 2025 Trinity Quirk <tquirk@ciq.com> - 8.6-9
 - Add support for AWS cloud mirroring
 
